@@ -2,7 +2,8 @@
   "name": "snake-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/snake.js",
+  "main": "./dist/src/snake.js",
+  "types": "./dist/src/snake.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "ts-mocha tests/**/*.test.ts",
