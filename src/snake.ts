@@ -20,6 +20,10 @@ class Snake {
 		return board.map((line) => line.join(" ")).join("|\n");
 	}
 
+	getSnake() : number[][] {
+		return JSON.parse(JSON.stringify(this._snake));
+	}
+
 	move(direction: string) : void {
 		const allowedDirections = [
 			"up",
