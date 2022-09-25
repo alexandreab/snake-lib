@@ -1,4 +1,9 @@
 {
+  "name": "snake-lib",
+  "version": "1.0.0",
+  "description": "Library of methods for snake game simulation",
+  "author": "Alexandre Barbosa",
+  "license": "ISC",
   "dependencies": {
     "typescript": "^4.8.3"
   },
