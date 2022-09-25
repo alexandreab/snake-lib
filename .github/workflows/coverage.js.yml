@@ -19,6 +19,8 @@ jobs:
         uses: codecov/codecov-action@v3
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
