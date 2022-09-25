@@ -10,4 +10,16 @@ class InvalidPosition extends Error {
   }
 }
 
-export {InvalidPosition};
+class InvalidParameter extends Error {
+  __proto__ = Error;
+
+  constructor(message?: string) {
+    if (message === undefined) {
+      message = 'Invalid parameter';
+    }
+    super(message);
+    Object.setPrototypeOf(this, InvalidParameter.prototype);
+  }
+}
+
+export {InvalidPosition, InvalidParameter};

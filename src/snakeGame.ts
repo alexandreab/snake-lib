@@ -9,10 +9,6 @@ class SnakeGame {
   public get board() {
     return this._board;
   }
-
-  getBoard() {
-    return this._board;
-  }
 }
 
 export default SnakeGame;

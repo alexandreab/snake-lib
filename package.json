@@ -12,6 +12,7 @@
   },
   "scripts": {
 	"test": "npx jest",
+	"coverage": "npx jest --coverage --coverageReporters=html --coverageReporters=text-summary",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",

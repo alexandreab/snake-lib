@@ -1,5 +1,5 @@
 import {Coordinate} from './board';
-import {InvalidPosition} from './errors';
+import {InvalidPosition, InvalidParameter} from './errors';
 
 class Snake {
   _body: Coordinate[];
@@ -25,7 +25,7 @@ class Snake {
         newHead = new Coordinate(head.posX + 1, head.posY);
         break;
       default:
-        throw new Error('Invalid direction');
+        throw new InvalidParameter();
     }
     if (this.collides(newHead)) {
       throw new InvalidPosition();
@@ -36,10 +36,6 @@ class Snake {
 
   collides(position: Coordinate): boolean {
     return this._body.some(e => e.isEqualTo(position));
-  }
-
-  public get body(): Coordinate[] {
-    return this._body;
   }
 
   public toString(): string {

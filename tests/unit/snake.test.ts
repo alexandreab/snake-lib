@@ -1,5 +1,5 @@
 import Snake from '../../src/snake';
-import {InvalidPosition} from '../../src/errors';
+import {InvalidPosition, InvalidParameter} from '../../src/errors';
 
 test('Snake instantiation', () => {
   const snake = new Snake(0, 0);
@@ -31,4 +31,9 @@ test('Snake can not grow to an invalid position', () => {
   expect(snake.toString()).toBe('[[5,5],[6,5]]');
   expect(() => snake.grow('left')).toThrow(InvalidPosition);
   expect(snake.toString()).toBe('[[5,5],[6,5]]');
+});
+
+test('Snake needs to grow to a valid direction', () => {
+  const snake = new Snake(5, 5);
+  expect(() => snake.grow('beyond')).toThrow(InvalidParameter);
 });

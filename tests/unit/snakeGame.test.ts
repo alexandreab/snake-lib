@@ -8,7 +8,7 @@ test('SnakeGame instantiation', () => {
 
 test('SnakeGame board property', () => {
   const game = new SnakeGame();
-  const board = game.getBoard();
+  const board = game.board;
   expect(board).not.toBe(undefined);
   expect(board).toBeInstanceOf(Board);
 });
