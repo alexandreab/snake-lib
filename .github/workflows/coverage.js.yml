@@ -17,3 +17,5 @@ jobs:
         run: npm run test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
