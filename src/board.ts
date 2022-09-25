@@ -5,6 +5,14 @@ class Coordinate {
     this.posX = x;
     this.posY = y;
   }
+
+  isEqualTo(c: Coordinate): boolean {
+    return this.posX === c.posX && this.posY === c.posY;
+  }
+
+  toString(): string {
+    return `[${this.posX},${this.posY}]`;
+  }
 }
 
 class Board {
